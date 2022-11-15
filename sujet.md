@@ -30,3 +30,10 @@ This is another good example of the time error that affected all Apple iPhone 4 
 
 Question 2:
  - https://issues.apache.org/jira/projects/COLLECTIONS/issues/COLLECTIONS-769?filter=doneissues
+ - Objectifs:
+ - Trouver un bug qui a été resolu
+ - Expliquer le bug, la solution
+ - Les dev ont t-ils ajouté de nouveaux tests après la resolution
+
+Question 3:
+
