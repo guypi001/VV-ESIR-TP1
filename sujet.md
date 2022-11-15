@@ -11,7 +11,7 @@
 5.  Shortly after the appearance of WebAssembly another paper proposed a mechanized specification of the language using Isabelle. The paper can be consulted here: https://www.cl.cam.ac.uk/~caw77/papers/mechanising-and-verifying-the-webassembly-specification.pdf. This mechanized specification complements the first formalization attempt from the paper. According to the author of this second paper, what are the main advantages of the mechanized specification? Did it help improving the original formal specification of the language? What other artifacts were derived from this mechanized specification? How did the author verify the specification? Does this new specification removes the need for testing?
 
 ## Answers
-Questions 1:
+Questions 1: Général information about bugs article
 
 We have to:
 - First do some research about articles that talk about bugs and choose one
@@ -21,12 +21,14 @@ We have to:
 This is another good example of the time error that affected all Apple iPhone 4 smartphones in the US and other countries during the November 1, 2010 Daylight Savings Time transition. Suppose a user sets their alarm for 7:30 pm the previous night, which is the time they want to be woken up after daylight saving time. At night, his iPhone's internal clock was automatically set back an hour as expected, and the alarm still showed 7:30am because it shouldn't have changed. But a bug I don't understand the details caused the alarm to go off at 8:30am the next morning instead of 7:30! For some, it's a good excuse to be late for work, but it causes others to miss trains and planes - less fun, and more expensive.
   
 - Third Say if it is local or global
+   It was a local bug
   
-- Forth Describe the failure
-  Temporal faillure
-- Fith Expose the repercussion on clients, consummers, company, or entity
-  Clients that thrust in the system 
-- Sixth Speculate if some test will probably
+- Forth Describe the failure:
+  It' s a kind of temporal faillure
+- Fith Expose the repercussion on clients, consummers, company, or entity:
+  Clients that thrust in the system will be late because for them they are on time before going bed and there is no reason for them to be late after
+- Sixth Speculate if some test will probably:
+ Probably some test will 
 
 Question 2: Appache server
  - https://issues.apache.org/jira/projects/COLLECTIONS/issues/COLLECTIONS-769?filter=doneissues       https://issues.apache.org/jira/projects/COLLECTIONS/issues/COLLECTIONS-786?filter=doneissues
@@ -48,3 +50,6 @@ Question 4: WebAssembly
    -Expliquons les principaux avantages d'avoir une spécification formelle pour webAssembly 
    -Celà veut - il dire que les implémentations de webAssembly ne devraient pas être testées?
 
+Question 5: 
+-what are the main advantages of the mechanized specification
+-Did it help improving the original formal specification of the language
