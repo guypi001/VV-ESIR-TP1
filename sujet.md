@@ -36,4 +36,13 @@ Question 2:
  - Les dev ont t-ils ajouté de nouveaux tests après la resolution
 
 Question 3:
+Après lecture du texte sur le chaos ingeneering:
+- Description des expériences concrètes réalisées
+- Donnons les exigences pour ces expériences
+- Quelles sont les variables observées
+- Donnons les principaux résultats obtenus
+- NETFLIX est elle la seule boite à faire du chaos engineering
+- Spéculons: comment ces expériences pourraient être meniée dans d'autres organisations en terme de type d'expériences, et de variables observées
+
+Question 4:
 
