@@ -35,8 +35,8 @@ Question 2:
  - Expliquer le bug, la solution
  - Les dev ont t-ils ajouté de nouveaux tests après la resolution
 
-Question 3:
-Après lecture du texte sur le chaos ingeneering:
+Question 3: Chaos engineering
+Après lecture du texte sur le chaos engineering
 - Description des expériences concrètes réalisées
 - Donnons les exigences pour ces expériences
 - Quelles sont les variables observées
@@ -44,5 +44,7 @@ Après lecture du texte sur le chaos ingeneering:
 - NETFLIX est elle la seule boite à faire du chaos engineering
 - Spéculons: comment ces expériences pourraient être meniée dans d'autres organisations en terme de type d'expériences, et de variables observées
 
-Question 4:
+Question 4: WebAssembly
+   -Expliquons les principaux avantages d'avoir une spécification formelle pour webAssembly 
+   -Celà veut - il dire que les implémentations de webAssembly ne devraient pas être testées?
 
