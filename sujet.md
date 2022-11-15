@@ -28,7 +28,7 @@ This is another good example of the time error that affected all Apple iPhone 4 
   Clients that thrust in the system 
 - Sixth Speculate if some test will probably
 
-Question 2:
+Question 2: Appache server
  - https://issues.apache.org/jira/projects/COLLECTIONS/issues/COLLECTIONS-769?filter=doneissues       https://issues.apache.org/jira/projects/COLLECTIONS/issues/COLLECTIONS-786?filter=doneissues
  - Objectifs:
  - Trouver un bug qui a été resolu
