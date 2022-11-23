@@ -12,10 +12,12 @@
 
 ## Answers
 Questions 1: Général information about bugs article
+For this section we choose to talk about The London Ambulance fiasco.
+The Computer Aided Despatch system of the London ambulance service failed dramatically on october 1992.
+In fact the system could not cope with the load placed on it by normal use;
+The response to emergency calls was serveral hours;
+Ambulance communications failled and ambulances were lost from the system.
 
-We have to:
-- First do some research about articles that talk about bugs and choose one
-   The iPhone 4 wakeup alarm bug
    
 - Second describe the bug
 This is another good example of the time error that affected all Apple iPhone 4 smartphones in the US and other countries during the November 1, 2010 Daylight Savings Time transition. Suppose a user sets their alarm for 7:30 pm the previous night, which is the time they want to be woken up after daylight saving time. At night, his iPhone's internal clock was automatically set back an hour as expected, and the alarm still showed 7:30am because it shouldn't have changed. But a bug I don't understand the details caused the alarm to go off at 8:30am the next morning instead of 7:30! For some, it's a good excuse to be late for work, but it causes others to miss trains and planes - less fun, and more expensive.
