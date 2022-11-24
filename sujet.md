@@ -12,26 +12,21 @@
 
 ## Answers
 Questions 1: Général information about bugs article
-For this section we choose to talk about The London Ambulance fiasco.
-The Computer Aided Despatch system of the London ambulance service failed dramatically on october 1992.
-In fact the system could not cope with the load placed on it by normal use;
-The response to emergency calls was serveral hours;
-Ambulance communications failled and ambulances were lost from the system.
-
-   
-- Second describe the bug
-This is another good example of the time error that affected all Apple iPhone 4 smartphones in the US and other countries during the November 1, 2010 Daylight Savings Time transition. Suppose a user sets their alarm for 7:30 pm the previous night, which is the time they want to be woken up after daylight saving time. At night, his iPhone's internal clock was automatically set back an hour as expected, and the alarm still showed 7:30am because it shouldn't have changed. But a bug I don't understand the details caused the alarm to go off at 8:30am the next morning instead of 7:30! For some, it's a good excuse to be late for work, but it causes others to miss trains and planes - less fun, and more expensive.
-  
-- Third Say if it is local or global
-   It was a local bug
-  
-- Forth Describe the failure:
-  It' s a kind of temporal faillure
-- Fith Expose the repercussion on clients, consummers, company, or entity:
-  Clients that thrust in the system will be late because for them they are on time before going bed and there is no reason for them to be late after
-- Sixth Speculate if some test will probably:
- Probably some test will 
-
+#------------------------------------------------------------------------------------------
+On October 26, 1992, shortly after its implementation, the London Ambulance Service (LAS) Computer Aided Dispatch (CAD) system experienced a dramatic failure. 
+This system, which was not previously automated, consisted of taking calls (recording the location on a form), identifying resources (those available and those required) and mobilizing resources. 
+Following the automation of the DAC, it turned out that after a while the system was no longer able to :
+	-cope with the load imposed on it by normal use;
+	-Respond to emergency calls in a timely manner;
+Also note that ambulance communications failed and some were lost in the system
+#-------------------------------------------------------------------------------------------
+Let us recall that the said system is composed of a software and hardware part of CAD, a software of geographical directory and cartography, a communication interface, a radio system. We can therefore without hesitation say that it is a global bug because it is the result of a bad interaction between the different parts that compose the system.
+#--------------------------------------------------------------------------------------------  
+Among the flaws that made it possible to realize the presence of the bug, we can mention the ambulances that could not communicate, the emergency calls that took more than an hour before getting answers.
+#---------------------------------------------------------------------------------------------
+This bug has naturally had disastrous consequences, such as: Several deaths because the system did not react in time
+#---------------------------------------------------------------------------------------------
+I find that tests could have avoided this bug as the designers did not take into account this overload
 Question 2: Appache server
  - https://issues.apache.org/jira/projects/COLLECTIONS/issues/COLLECTIONS-769?filter=doneissues       https://issues.apache.org/jira/projects/COLLECTIONS/issues/COLLECTIONS-786?filter=doneissues
  - Objectifs:
