@@ -25,7 +25,7 @@ Let us recall that the said system is composed of a software and hardware part o
 Among the flaws that made it possible to realize the presence of the bug, we can mention the ambulances that could not communicate, the emergency calls that took more than an hour before getting answers.
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 This bug has naturally had disastrous consequences, such as: Several deaths because the system did not react in time
-#----------------------------------------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------------------------------------
 I find that tests could have avoided this bug as the designers did not take into account this overload
 
 Question 2: Appache server
