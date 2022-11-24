@@ -12,13 +12,15 @@
 
 ## Answers
 Questions 1: Général information about bugs article
-#------------------------------------------------------------------------------------------
-   On October 26, 1992, shortly after its implementation, the London Ambulance Service (LAS) Computer Aided Dispatch (CAD) system experienced a dramatic failure. 
+#---------------------------------------------------------------------------------------------
+   
+On October 26, 1992, shortly after its implementation, the London Ambulance Service (LAS) Computer Aided Dispatch (CAD) system experienced a dramatic failure. 
 This system, which was not previously automated, consisted of taking calls (recording the location on a form), identifying resources (those available and those required) and mobilizing resources. 
 Following the automation of the DAC, it turned out that after a while the system was no longer able to :
 	-cope with the load imposed on it by normal use;
 	-Respond to emergency calls in a timely manner;
 Also note that ambulance communications failed and some were lost in the system
+
 #----------------------------------------------------------------------------------------------------------------------------------------------------------
 Let us recall that the said system is composed of a software and hardware part of CAD, a software of geographical directory and cartography, a communication interface, a radio system. We can therefore without hesitation say that it is a global bug because it is the result of a bad interaction between the different parts that compose the system.
 #----------------------------------------------------------------------------------------------------------------------------------------------------------- 
