@@ -29,12 +29,14 @@ This bug has naturally had disastrous consequences, such as: Several deaths beca
 I find that tests could have avoided this bug as the designers did not take into account this overload
 
 Question 2: Appache server
- - https://issues.apache.org/jira/projects/COLLECTIONS/issues/COLLECTIONS-769?filter=doneissues       https://issues.apache.org/jira/projects/COLLECTIONS/issues/COLLECTIONS-786?filter=doneissues
- - Objectifs:
- - Trouver un bug qui a été resolu
- - Expliquer le bug, la solution
- - Les dev ont t-ils ajouté de nouveaux tests après la resolution
 
+The Apache Commons Collections package contains types that extend and augment the Java Collections Framework.
+One of the bug that they resolve on the page is the the lack of a function to test if a hasher instance is empty.
+Developpers add a function named isEmpty. This is a local bug because it is due to an omission of the developers
+The Hasher interface of the bloomfilter package has no way of determining whether the hasher is empty. For the SimpleHasher implementation that is not a problem, however, the HasherCollection can be empty, and there is no guarantee that any other Hasher implementation can have an empty state. So to fix  this bug they just add a funtion to test if the hasher is empty
+
+ -The developers have indeed added a new test to counteract the bug
+ 
 Question 3: Chaos engineering
 Après lecture du texte sur le chaos engineering
 - Description des expériences concrètes réalisées
