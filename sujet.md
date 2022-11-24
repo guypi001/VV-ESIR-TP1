@@ -19,14 +19,15 @@ Following the automation of the DAC, it turned out that after a while the system
 	-cope with the load imposed on it by normal use;
 	-Respond to emergency calls in a timely manner;
 Also note that ambulance communications failed and some were lost in the system
-#-------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Let us recall that the said system is composed of a software and hardware part of CAD, a software of geographical directory and cartography, a communication interface, a radio system. We can therefore without hesitation say that it is a global bug because it is the result of a bad interaction between the different parts that compose the system.
-#--------------------------------------------------------------------------------------------  
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
 Among the flaws that made it possible to realize the presence of the bug, we can mention the ambulances that could not communicate, the emergency calls that took more than an hour before getting answers.
-#---------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 This bug has naturally had disastrous consequences, such as: Several deaths because the system did not react in time
-#---------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 I find that tests could have avoided this bug as the designers did not take into account this overload
+
 Question 2: Appache server
  - https://issues.apache.org/jira/projects/COLLECTIONS/issues/COLLECTIONS-769?filter=doneissues       https://issues.apache.org/jira/projects/COLLECTIONS/issues/COLLECTIONS-786?filter=doneissues
  - Objectifs:
