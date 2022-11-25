@@ -41,10 +41,31 @@ The Hasher interface of the bloomfilter package has no way of determining whethe
 Question 3: Chaos engineering
 Après lecture du texte sur le chaos engineering
 - Description des expériences concrètes réalisées
+
+--Netflix has been running an internal service called Chaos Monkey which
+randomly selects virtual machine instances that host our production services and terminates
+them
+
+
+__________________________________________________________
 - Donnons les exigences pour ces expériences
+
+1--Chaos Monkey is only active during normal
+working hours so that engineers can respond quickly if a service fails due to an instance
+termination.
+
+
 - Quelles sont les variables observées
+	La qualité du service rendu, la resillence des serveurs aux pannes
 - Donnons les principaux résultats obtenus
+- 
 - NETFLIX est elle la seule boite à faire du chaos engineering
+
+Pas du tout Amazon, Facebook le font tous
+For example, we perform "Chaos Kong" exercises that simulate the failure of an entire Amazon EC2
+region, and we also run Failure Injection Testing (FIT) exercises where we cause requests
+between Netflix services to fail and verify that the system degrades gracefully.
+
 - Spéculons: comment ces expériences pourraient être meniée dans d'autres organisations en terme de type d'expériences, et de variables observées
 
 Question 4: WebAssembly
