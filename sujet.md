@@ -36,8 +36,7 @@ The Apache Commons Collections package contains types that extend and augment th
 One of the bug that they resolve on the page is the the lack of a function to test if a hasher instance is empty.
 Developpers add a function named isEmpty. This is a local bug because it is due to an omission of the developers
 The Hasher interface of the bloomfilter package has no way of determining whether the hasher is empty. For the SimpleHasher implementation that is not a problem, however, the HasherCollection can be empty, and there is no guarantee that any other Hasher implementation can have an empty state. So to fix  this bug they just add a funtion to test if the hasher is empty
-
- -The developers have indeed added a new test to counteract the bug
+-The developers have indeed added a new test to counteract the bug
  
 Question 3: Chaos engineering
 Après lecture du texte sur le chaos engineering
@@ -49,9 +48,31 @@ Après lecture du texte sur le chaos engineering
 - Spéculons: comment ces expériences pourraient être meniée dans d'autres organisations en terme de type d'expériences, et de variables observées
 
 Question 4: WebAssembly
-   -Expliquons les principaux avantages d'avoir une spécification formelle pour webAssembly 
-   -Celà veut - il dire que les implémentations de webAssembly ne devraient pas être testées?
+
+WebAssembly addresses the problem of safe, fast, portable low-level code on the Web.
+
+Safe, fast, and portable semantics:
+safe to execute
+fast to execute
+language-, hardware-, and platform-independent
+deterministic and easy to reason about
+simple interoperability with the Web platform
+
+--------------------------------------
+
+Safe and efficient representation:
+compact and easy to decode
+easy to validate and compile
+easy to generate for producers
+streamable and parallelizable
+Why are these goals important? Why are
+
+-------------------------------------
+
+This language has a lot of quality, but you can never be sure of a developer's mistake. So it would be wise to have tests
 
 Question 5: 
 -what are the main advantages of the mechanized specification
+
+
 -Did it help improving the original formal specification of the language
