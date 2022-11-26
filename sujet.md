@@ -11,55 +11,43 @@
 5.  Shortly after the appearance of WebAssembly another paper proposed a mechanized specification of the language using Isabelle. The paper can be consulted here: https://www.cl.cam.ac.uk/~caw77/papers/mechanising-and-verifying-the-webassembly-specification.pdf. This mechanized specification complements the first formalization attempt from the paper. According to the author of this second paper, what are the main advantages of the mechanized specification? Did it help improving the original formal specification of the language? What other artifacts were derived from this mechanized specification? How did the author verify the specification? Does this new specification removes the need for testing?
 
 ## Answers
-Questions 1: Général information about bugs article
-#---------------------------------------------------------------------------------------------
-   
-On October 26, 1992, shortly after its implementation, the London Ambulance Service (LAS) Computer Aided Dispatch (CAD) system experienced a dramatic failure. 
+________________________________________________________________________________________________________________________________________________________
+
+1. On October 26, 1992, shortly after its implementation, the London Ambulance Service (LAS) Computer Aided Dispatch (CAD) system experienced a dramatic failure. 
 This system, which was not previously automated, consisted of taking calls (recording the location on a form), identifying resources (those available and those required) and mobilizing resources. 
 Following the automation of the DAC, it turned out that after a while the system was no longer able to :
 	-cope with the load imposed on it by normal use;
 	-Respond to emergency calls in a timely manner;
 Also note that ambulance communications failed and some were lost in the system
 
-#----------------------------------------------------------------------------------------------------------------------------------------------------------
 Let us recall that the said system is composed of a software and hardware part of CAD, a software of geographical directory and cartography, a communication interface, a radio system. We can therefore without hesitation say that it is a global bug because it is the result of a bad interaction between the different parts that compose the system.
-#----------------------------------------------------------------------------------------------------------------------------------------------------------- 
+
 Among the flaws that made it possible to realize the presence of the bug, we can mention the ambulances that could not communicate, the emergency calls that took more than an hour before getting answers.
-#------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 This bug has naturally had disastrous consequences, such as: Several deaths because the system did not react in time
-#------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 I find that tests could have avoided this bug as the designers did not take into account this overload
 
-Question 2: Appache server
+_________________________________________________________________________________________________________________________________________________________
 
-The Apache Commons Collections package contains types that extend and augment the Java Collections Framework.
-One of the bug that they resolve on the page is the the lack of a function to test if a hasher instance is empty.
-Developpers add a function named isEmpty. This is a local bug because it is due to an omission of the developers
+2. The Apache Commons Collections package contains types that extend and augment the Java Collections Framework. One of the bug that they resolve on the page is the the lack of a function to test if a hasher instance is empty. Developpers add a function named isEmpty. This is a local bug because it is due to an omission of the developers.
+
 The Hasher interface of the bloomfilter package has no way of determining whether the hasher is empty. For the SimpleHasher implementation that is not a problem, however, the HasherCollection can be empty, and there is no guarantee that any other Hasher implementation can have an empty state. So to fix  this bug they just add a funtion to test if the hasher is empty
--The developers have indeed added a new test to counteract the bug
+
+The developers have indeed added a new test to counteract the bug
  
-Question 3: Chaos engineering
-Après lecture du texte sur le chaos engineering
-- Description des expériences concrètes réalisées
 
---Netflix has been running an internal service called Chaos Monkey which
-randomly selects virtual machine instances that host our production services and terminates
-them
+3. Après lecture du texte sur le chaos engineering
 
+Description des expériences concrètes réalisées. Netflix has been running an internal service called Chaos Monkey which randomly selects virtual machine instances that host our production services and terminates them
 
-__________________________________________________________
-- Donnons les exigences pour ces expériences
+Chaos Monkey is only active during normal working hours so that engineers can respond quickly if a service fails due to an instance termination.
 
-1--Chaos Monkey is only active during normal
-working hours so that engineers can respond quickly if a service fails due to an instance
-termination.
-
-
-- Quelles sont les variables observées
+Quelles sont les variables observées
 	La qualité du service rendu, la resillence des serveurs aux pannes
-- Donnons les principaux résultats obtenus
-- 
-- NETFLIX est elle la seule boite à faire du chaos engineering
+Donnons les principaux résultats obtenus
+
+NETFLIX est elle la seule boite à faire du chaos engineering
 
 Pas du tout Amazon, Facebook le font tous
 For example, we perform "Chaos Kong" exercises that simulate the failure of an entire Amazon EC2
