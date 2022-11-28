@@ -13,11 +13,16 @@
 ## Answers
 ________________________________________________________________________________________________________________________________________________________
 
-1. On October 26, 1992, shortly after its implementation, the London Ambulance Service (LAS) Computer Aided Dispatch (CAD) system experienced a dramatic failure. 
+1. 
+
+On October 26, 1992, shortly after its implementation, the London Ambulance Service (LAS) Computer Aided Dispatch (CAD) system experienced a dramatic failure. 
 This system, which was not previously automated, consisted of taking calls (recording the location on a form), identifying resources (those available and those required) and mobilizing resources. 
 Following the automation of the DAC, it turned out that after a while the system was no longer able to :
+	
 	-cope with the load imposed on it by normal use;
+	
 	-Respond to emergency calls in a timely manner;
+
 Also note that ambulance communications failed and some were lost in the system
 
 Let us recall that the said system is composed of a software and hardware part of CAD, a software of geographical directory and cartography, a communication interface, a radio system. We can therefore without hesitation say that it is a global bug because it is the result of a bad interaction between the different parts that compose the system.
@@ -30,7 +35,12 @@ I find that tests could have avoided this bug as the designers did not take into
 
 _________________________________________________________________________________________________________________________________________________________
 
-2. The Apache Commons Collections package contains types that extend and augment the Java Collections Framework. One of the bug that they resolve on the page is the the lack of a function to test if a hasher instance is empty. Developpers add a function named isEmpty. This is a local bug because it is due to an omission of the developers.
+2. The Apache Commons Collections package contains types that extend and augment the Java Collections Framework. 
+
+One of the bug that they resolve on the page and we have choossen to talk about  is the lack of a function to test if a hasher instance is empty.In fact this function is really important because some operations are supposed to be done on empty hasher so if we can't test this criteria it's a problem. 
+
+
+This is #a local bug#  because it is due to an omission of the developers.
 
 The Hasher interface of the bloomfilter package has no way of determining whether the hasher is empty. For the SimpleHasher implementation that is not a problem, however, the HasherCollection can be empty, and there is no guarantee that any other Hasher implementation can have an empty state. So to fix  this bug they just add a funtion to test if the hasher is empty
 
