@@ -22,8 +22,8 @@ Following the automation of the DAC, it turned out that after a while the system
 	-cope with the load imposed on it by normal use;
 	
 	-Respond to emergency calls in a timely manner;
-
-Also note that ambulance communications failed and some were lost in the system
+	
+	- Communicate with ambulances
 
 Let us recall that the said system is composed of a software and hardware part of CAD, a software of geographical directory and cartography, a communication interface, a radio system. We can therefore without hesitation say that it is a global bug because it is the result of a bad interaction between the different parts that compose the system.
 
