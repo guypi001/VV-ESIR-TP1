@@ -14,24 +14,30 @@
 ________________________________________________________________________________________________________________________________________________________
 
 1. 
+For this first question we have choosen to describe the London Ambulance System (LAS) bug. In fact the LAS  is the largest ambulance service worldwide responding to between 2000 and 2500 calls per day with a fleet of 750 vehicles under its disposal. The service covers the greater London area (600 square miles) with the cooperation of the London Fire and Civil Defence Authority and the Metropolitan Police. It compromises of the Accident and Emergency Service
+(A&E) and Patient Transport Service (PTS).
 
-On October 26, 1992, shortly after its implementation, the London Ambulance Service (LAS) Computer Aided Dispatch (CAD) system experienced a dramatic failure. 
-This system, which was not previously automated, consisted of taking calls (recording the location on a form), identifying resources (those available and those required) and mobilizing resources. 
-Following the automation of the DAC, it turned out that after a while the system was no longer able to :
+On the morning of Monday 26th October 1992 the LAS CAD system went live for the first time. Unfortunately there were 81 known bugs in the system at that time and it had been 10 months since the control room staff were first trained to use the software. The system had 4 primary flaws when it went live; it did not function well when it was given incomplete data regarding the status of the ambulances and the system did not accept errors made that occurred in normal day-to-day use of a computer system. Furthermore, the user interface had black spots which meant that the user could not see all the information on screen and finally, the most important failure, the system stored incident information even after it was not needed, which caused the system to fill up memory and fail.
+
+Many factors were responsible for the unfortunate failure of the LAS CAD System as discussed below:
+
+	-Bad data checks
+	-Memory leaks
+	-Graphical User Interface issues
+	-Bad Hardware reuse
+	-...
+In view of all these elements, we can conclude that this was **a global bug.
+
+The first of these problems began to show during the morning rush of calls when it became apparent to all involved in the use of the system that things were about to go wrong. There were a number of duplicate calls being made as the system was losing accepted emergency calls, which lead to a number of distraught callers
+being kept waiting in the call-queuing system for up to 30 minutes. The system created further delays when dispatching ambulances. It failed to recognise certain roads and routes, which meant the drivers had to revert back to using maps to navigate their way or call the ambulance dispatch. These system errors led to the late
+arrival of ambulances, or two ambulances turning up at the same time, or worse not at all. By Monday evening, the number of system failures had increased due to the number of new emergency calls which began to overwrite old ones that were not dealt with. There were further delays in the system created by exception
+
+this bug has naturally had various consequences such as:
+		
+	-In humans terms: Claims were made in the press that up to 20-30 people may have died as a result of ambulances arriving to late on the scene.
+	-In economic terms: The software is estimated to have cost between £1.1 and £1.5
 	
-	-cope with the load imposed on it by normal use;
-	
-	-Respond to emergency calls in a timely manner;
-	
-	- Communicate with ambulances
-
-Let us recall that the said system is composed of a software and hardware part of CAD, a software of geographical directory and cartography, a communication interface, a radio system. We can therefore without hesitation say that it is a global bug because it is the result of a bad interaction between the different parts that compose the system.
-
-Among the flaws that made it possible to realize the presence of the bug, we can mention the ambulances that could not communicate, the emergency calls that took more than an hour before getting answers.
-
-This bug has naturally had disastrous consequences, such as: Several deaths because the system did not react in time
-
-I find that tests could have avoided this bug as the designers did not take into account this overload
+Although there was functional testing of various components, integration testing to ensure that the system can operate together was not carried out. Thus, there was no attempt to test how the system would react to different circumstances such as high call rate, multiple incident reporting, vehicle location problems, falling back to backup servers, etc. It seems clear that if the tests had been done correctly they would have avoided this disaster
 
 _________________________________________________________________________________________________________________________________________________________
 
