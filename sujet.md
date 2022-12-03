@@ -14,6 +14,7 @@
 ________________________________________________________________________________________________________________________________________________________
 
 1. #--------------------Answer 1---------------------------------------------------#
+
 For this first question we have choosen to describe the London Ambulance System (LAS) bug. In fact the LAS  is the largest ambulance service worldwide responding to between 2000 and 2500 calls per day with a fleet of 750 vehicles under its disposal. The service covers the greater London area (600 square miles) with the cooperation of the London Fire and Civil Defence Authority and the Metropolitan Police. It compromises of the Accident and Emergency Service
 (A&E) and Patient Transport Service (PTS).
 
