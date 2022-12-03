@@ -13,8 +13,7 @@
 ## Answers
 ________________________________________________________________________________________________________________________________________________________
 
-1. 
-For this first question we have choosen to describe the London Ambulance System (LAS) bug. In fact the LAS  is the largest ambulance service worldwide responding to between 2000 and 2500 calls per day with a fleet of 750 vehicles under its disposal. The service covers the greater London area (600 square miles) with the cooperation of the London Fire and Civil Defence Authority and the Metropolitan Police. It compromises of the Accident and Emergency Service
+1. For this first question we have choosen to describe the London Ambulance System (LAS) bug. In fact the LAS  is the largest ambulance service worldwide responding to between 2000 and 2500 calls per day with a fleet of 750 vehicles under its disposal. The service covers the greater London area (600 square miles) with the cooperation of the London Fire and Civil Defence Authority and the Metropolitan Police. It compromises of the Accident and Emergency Service
 (A&E) and Patient Transport Service (PTS).
 
 On the morning of Monday 26th October 1992 the LAS CAD system went live for the first time. Unfortunately there were 81 known bugs in the system at that time and it had been 10 months since the control room staff were first trained to use the software. The system had 4 primary flaws when it went live; it did not function well when it was given incomplete data regarding the status of the ambulances and the system did not accept errors made that occurred in normal day-to-day use of a computer system. Furthermore, the user interface had black spots which meant that the user could not see all the information on screen and finally, the most important failure, the system stored incident information even after it was not needed, which caused the system to fill up memory and fail.
@@ -34,7 +33,8 @@ arrival of ambulances, or two ambulances turning up at the same time, or worse n
 
 this bug has naturally had various consequences such as:
 		
-	-In humans terms: Claims were made in the press that up to 20-30 people may have died as a result of ambulances arriving to late on the scene.
+	-In humans terms: Claims were made in the press that up to 20-30 people may have died as a result of ambulances arriving to 
+	 late on the scene.
 	-In economic terms: The software is estimated to have cost between £1.1 and £1.5
 	
 Although there was functional testing of various components, integration testing to ensure that the system can operate together was not carried out. Thus, there was no attempt to test how the system would react to different circumstances such as high call rate, multiple incident reporting, vehicle location problems, falling back to backup servers, etc. It seems clear that if the tests had been done correctly they would have avoided this disaster
