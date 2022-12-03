@@ -11,7 +11,6 @@
 5.  Shortly after the appearance of WebAssembly another paper proposed a mechanized specification of the language using Isabelle. The paper can be consulted here: https://www.cl.cam.ac.uk/~caw77/papers/mechanising-and-verifying-the-webassembly-specification.pdf. This mechanized specification complements the first formalization attempt from the paper. According to the author of this second paper, what are the main advantages of the mechanized specification? Did it help improving the original formal specification of the language? What other artifacts were derived from this mechanized specification? How did the author verify the specification? Does this new specification removes the need for testing?
 
 ## Answers
-________________________________________________________________________________________________________________________________________________________
 
 1. #--------------------Answer 1---------------------------------------------------#
 
@@ -54,7 +53,7 @@ The Hasher interface of the bloomfilter package has no way of determining whethe
 
 The developers have indeed added a new test to counteract the bug
  
-
+_________________________________________________________________________________________________________________________________________________________
 3. Après lecture du texte sur le chaos engineering
 
 Description des expériences concrètes réalisées. Netflix has been running an internal service called Chaos Monkey which randomly selects virtual machine instances that host our production services and terminates them
@@ -74,7 +73,8 @@ between Netflix services to fail and verify that the system degrades gracefully.
 
 - Spéculons: comment ces expériences pourraient être meniée dans d'autres organisations en terme de type d'expériences, et de variables observées
 
-Question 4: WebAssembly
+_________________________________________________________________________________________________________________________________________________________
+4: WebAssembly
 
 WebAssembly addresses the problem of safe, fast, portable low-level code on the Web.
 
@@ -97,6 +97,8 @@ Why are these goals important? Why are
 -------------------------------------
 
 This language has a lot of quality, but you can never be sure of a developer's mistake. So it would be wise to have tests
+
+_________________________________________________________________________________________________________________________________________________________
 
 Question 5: 
 -what are the main advantages of the mechanized specification
