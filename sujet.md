@@ -13,7 +13,8 @@
 ## Answers
 ________________________________________________________________________________________________________________________________________________________
 
-1. For this first question we have choosen to describe the London Ambulance System (LAS) bug. In fact the LAS  is the largest ambulance service worldwide responding to between 2000 and 2500 calls per day with a fleet of 750 vehicles under its disposal. The service covers the greater London area (600 square miles) with the cooperation of the London Fire and Civil Defence Authority and the Metropolitan Police. It compromises of the Accident and Emergency Service
+1. 
+For this first question we have choosen to describe the London Ambulance System (LAS) bug. In fact the LAS  is the largest ambulance service worldwide responding to between 2000 and 2500 calls per day with a fleet of 750 vehicles under its disposal. The service covers the greater London area (600 square miles) with the cooperation of the London Fire and Civil Defence Authority and the Metropolitan Police. It compromises of the Accident and Emergency Service
 (A&E) and Patient Transport Service (PTS).
 
 On the morning of Monday 26th October 1992 the LAS CAD system went live for the first time. Unfortunately there were 81 known bugs in the system at that time and it had been 10 months since the control room staff were first trained to use the software. The system had 4 primary flaws when it went live; it did not function well when it was given incomplete data regarding the status of the ambulances and the system did not accept errors made that occurred in normal day-to-day use of a computer system. Furthermore, the user interface had black spots which meant that the user could not see all the information on screen and finally, the most important failure, the system stored incident information even after it was not needed, which caused the system to fill up memory and fail.
@@ -25,7 +26,7 @@ Many factors were responsible for the unfortunate failure of the LAS CAD System 
 	-Graphical User Interface issues
 	-Bad Hardware reuse
 	-...
-In view of all these elements, we can conclude that this was **a global bug.
+In view of all these elements, we can conclude that this was **a global bug.**
 
 The first of these problems began to show during the morning rush of calls when it became apparent to all involved in the use of the system that things were about to go wrong. There were a number of duplicate calls being made as the system was losing accepted emergency calls, which lead to a number of distraught callers
 being kept waiting in the call-queuing system for up to 30 minutes. The system created further delays when dispatching ambulances. It failed to recognise certain roads and routes, which meant the drivers had to revert back to using maps to navigate their way or call the ambulance dispatch. These system errors led to the late
