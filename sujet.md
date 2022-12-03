@@ -13,7 +13,7 @@
 ## Answers
 ________________________________________________________________________________________________________________________________________________________
 
-1. 
+1. #--------------------Answer 1---------------------------------------------------#
 For this first question we have choosen to describe the London Ambulance System (LAS) bug. In fact the LAS  is the largest ambulance service worldwide responding to between 2000 and 2500 calls per day with a fleet of 750 vehicles under its disposal. The service covers the greater London area (600 square miles) with the cooperation of the London Fire and Civil Defence Authority and the Metropolitan Police. It compromises of the Accident and Emergency Service
 (A&E) and Patient Transport Service (PTS).
 
@@ -42,7 +42,7 @@ Although there was functional testing of various components, integration testing
 
 _________________________________________________________________________________________________________________________________________________________
 
-2. The Apache Commons Collections package contains types that extend and augment the Java Collections Framework. 
+2. #--------------------Answer 2---------------------------------------------------#
 
 One of the bug that they resolve on the page and we have choossen to talk about  is the lack of a function to test if a hasher instance is empty.In fact this function is really important because some operations are supposed to be done on empty hasher so if we can't test this criteria it's a problem. 
 
