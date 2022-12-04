@@ -12,8 +12,7 @@
 
 ## Answers
 
-1. #--------------------Answer 1---------------------------------------------------#
-
+1.
 For this first question we have choosen to describe the London Ambulance System (LAS) bug. In fact the LAS  is the largest ambulance service worldwide responding to between 2000 and 2500 calls per day with a fleet of 750 vehicles under its disposal. The service covers the greater London area (600 square miles) with the cooperation of the London Fire and Civil Defence Authority and the Metropolitan Police. It compromises of the Accident and Emergency Service
 (A&E) and Patient Transport Service (PTS).
 
@@ -42,8 +41,7 @@ Although there was functional testing of various components, integration testing
 
 _________________________________________________________________________________________________________________________________________________________
 
-2. #--------------------Answer 2---------------------------------------------------#
-
+2.
 The Apache Commons Collections package contains types that extend and augment the Java Collections Framework.It use dedicated issue tracking systems to discuss and follow the evolution of bugs and new features. Here we chose to explain one of them.
 The bug was that The CollectionUtils.removeAll(Collection<E> collection, Collection<?> remove) does not throw a NullPointerException(NPE) when the “remove” parameters is null, but only if the “collection” parameter is empty. In the documentation it is stated that an NPE will be thrown if any of the parameters is null.
 
