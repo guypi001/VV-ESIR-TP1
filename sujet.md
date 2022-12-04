@@ -40,7 +40,6 @@ this bug has naturally had various consequences such as:
 Although there was functional testing of various components, integration testing to ensure that the system can operate together was not carried out. Thus, there was no attempt to test how the system would react to different circumstances such as high call rate, multiple incident reporting, vehicle location problems, falling back to backup servers, etc. It seems clear that if the tests had been done correctly they would have avoided this disaster
 
 _________________________________________________________________________________________________________________________________________________________
-
 2.
 The Apache Commons Collections package contains types that extend and augment the Java Collections Framework.It use dedicated issue tracking systems to discuss and follow the evolution of bugs and new features. Here we chose to explain one of them.
 The bug was that The CollectionUtils.removeAll(Collection<E> collection, Collection<?> remove) does not throw a NullPointerException(NPE) when the “remove” parameters is null, but only if the “collection” parameter is empty. In the documentation it is stated that an NPE will be thrown if any of the parameters is null while this is not always the case.
@@ -62,7 +61,6 @@ The developers have indeed added  new test as you can also see:
  
 _________________________________________________________________________________________________________________________________________________________
 3.
-
 Chaos Engineering is the discipline of experimenting on a distributed system in order to build confidence in its capability to withstand turbulent conditions in production.Netflix is one of the company famous for the popularization of chaos engineering. For years, Netflix has been running an internal service called Chaos Monkey which randomly selects virtual machine instances that host our production services and terminates them. Chaos Monkey's purpose was to encourage Netflix engineers to design software services that can withstand failures of individual instances. The success of this practice encouraged Netflix to extend the approach of injecting failures into the production system in order to improve reliability. For
 example, they perform **"Chaos Kong"** exercises that simulate the failure of an entire Amazon EC2 region, and they also run Failure Injection Testing (FIT) exercises where they cause requests between Netflix services to fail and verify that the system degrades gracefully.
 Concretely, all these experiences are based on four principles:
@@ -78,15 +76,15 @@ The main requirement is that Chaos engineering is only active during normal work
 At Netflix, they are using Chaos Engineering to ensure that the system still works properly under a variety of different conditions. For this, there are certain variables that engineers observe. We can mention SPS (stream starts Per Second) which show how many users start streaming a video each second or new account signups per second.
 
 The SPS metric varies slowly and predictably over the course of a day, as shown in this Figure ![image](https://user-images.githubusercontent.com/107374001/205501116-0509bee0-1e74-4f05-98b4-1b87fd00b87a.png)
- . Engineers at Netflix spend so much time looking at SPS that they have developed an intuition about whether a given fluctuation is within the standard range of variation or whether it is cause for concern. If engineers observe an unexpected change in SPS, we know there is a problem with the system.
+Engineers at Netflix spend so much time looking at SPS that they have developed an intuition about whether a given fluctuation is within the standard range of variation or whether it is cause for concern. If engineers observe an unexpected change in SPS, we know there is a problem with the system.
 
-Pas du tout Amazon, Facebook le font tous
+Netflix is not the only company to apply chaos engineering. Organizations such as Amazon, Google, Microsoft, and Facebook apply similar techniques to test the resilience of their own systems.
 
-- Spéculons: comment ces expériences pourraient être meniée dans d'autres organisations en terme de type d'expériences, et de variables observées
+For companies selling their services Chaos Engineering is the ideal technique to test the resilience of their system. for example an e commerce
+site might use a metric such as number of completed purchases per second.
 
 _________________________________________________________________________________________________________________________________________________________
-4: WebAssembly
-
+4.
 WebAssembly addresses the problem of safe, fast, portable low-level code on the Web.
 
 Safe, fast, and portable semantics:
@@ -110,8 +108,7 @@ Why are these goals important? Why are
 This language has a lot of quality, but you can never be sure of a developer's mistake. So it would be wise to have tests
 
 _________________________________________________________________________________________________________________________________________________________
-
-Question 5: 
+5.
 -what are the main advantages of the mechanized specification
 
 
