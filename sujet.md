@@ -52,7 +52,7 @@ To solve the problem, they add null check in ListUtil.removeAll() as shown below
 	Objects.requireNonNull(remove, "remove");
 
 
-The developers have indeed added  new test as you can see below:
+The developers have indeed added  new test as you can also see:
 
 	assertThrows(NullPointerException.class, () -> ListUtils.removeAll(null, new ArrayList<Object>()),
                 "expecting NullPointerException");
@@ -61,22 +61,26 @@ The developers have indeed added  new test as you can see below:
                 "expecting NullPointerException");
  
 _________________________________________________________________________________________________________________________________________________________
-3. Après lecture du texte sur le chaos engineering
+3.
 
-Description des expériences concrètes réalisées. Netflix has been running an internal service called Chaos Monkey which randomly selects virtual machine instances that host our production services and terminates them
+Chaos Engineering is the discipline of experimenting on a distributed system in order to build confidence in its capability to withstand turbulent conditions in production.Netflix is one of the company famous for the popularization of chaos engineering. For years, Netflix has been running an internal service called Chaos Monkey which randomly selects virtual machine instances that host our production services and terminates them. Chaos Monkey's purpose was to encourage Netflix engineers to design software services that can withstand failures of individual instances. The success of this practice encouraged Netflix to extend the approach of injecting failures into the production system in order to improve reliability. For
+example, they perform **"Chaos Kong"** exercises that simulate the failure of an entire Amazon EC2 region, and they also run Failure Injection Testing (FIT) exercises where they cause requests between Netflix services to fail and verify that the system degrades gracefully.
+Concretely, all these experiences are based on four principles:
 
-Chaos Monkey is only active during normal working hours so that engineers can respond quickly if a service fails due to an instance termination.
+		-Build a hypothesis around steady state behavior
+		-Vary realworld
+		-events
+		-Run experiments in production
+		-Automate experiments to run continuously
 
-Quelles sont les variables observées
-	La qualité du service rendu, la resillence des serveurs aux pannes
-Donnons les principaux résultats obtenus
+The main requirement is that Chaos engineering is only active during normal working hours so that engineers can respond quickly if a service fails due to an instance termination.
 
-NETFLIX est elle la seule boite à faire du chaos engineering
+At Netflix, they are using Chaos Engineering to ensure that the system still works properly under a variety of different conditions. For this, there are certain variables that engineers observe. We can mention SPS (stream starts Per Second) which show how many users start streaming a video each second or new account signups per second.
+
+The SPS metric varies slowly and predictably over the course of a day, as shown in this Figure ![image](https://user-images.githubusercontent.com/107374001/205501116-0509bee0-1e74-4f05-98b4-1b87fd00b87a.png)
+ . Engineers at Netflix spend so much time looking at SPS that they have developed an intuition about whether a given fluctuation is within the standard range of variation or whether it is cause for concern. If engineers observe an unexpected change in SPS, we know there is a problem with the system.
 
 Pas du tout Amazon, Facebook le font tous
-For example, we perform "Chaos Kong" exercises that simulate the failure of an entire Amazon EC2
-region, and we also run Failure Injection Testing (FIT) exercises where we cause requests
-between Netflix services to fail and verify that the system degrades gracefully.
 
 - Spéculons: comment ces expériences pourraient être meniée dans d'autres organisations en terme de type d'expériences, et de variables observées
 
