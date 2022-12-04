@@ -88,26 +88,21 @@ site might use a metric such as number of completed purchases per second.
 
 _________________________________________________________________________________________________________________________________________________________
 4.
-WebAssembly addresses the problem of safe, fast, portable low-level code on the Web.  
-Read the paper and explain what are the main advantages of having a formal specification for WebAssembly. In your opinion, does this mean that WebAssembly implementations should not be tested
+WebAssembly (Wasm) is a binary instruction format for a stack-based virtual machine. Wasm is designed as a portable compilation target for programming languages, enabling deployment on the web for client and server applications. 
 
-Safe, fast, and portable semantics:
-safe to execute
-fast to execute
-language-, hardware-, and platform-independent
-deterministic and easy to reason about
-simple interoperability with the Web platform
+WebAssembly addresses the problem of safe, fast, portable low-level code on the Web. Previous attempts at solving it, from ActiveX to Native Client to asm.js, have fallen short of properties that a low-level compilation target should have:
 
---------------------------------------
-
-Safe and efficient representation:
-compact and easy to decode
-easy to validate and compile
-easy to generate for producers
-streamable and parallelizable
-Why are these goals important? Why are
-
--------------------------------------
+	 Safe, fast, and portable semantics:
+		-safe to execute
+		-fast to execute
+		-language-, hardware-, and platform-independent
+		-deterministic and easy to reason about
+		-simple interoperability with the Web platform
+	 Safe and efficient representation:
+		-compact and easy to decode
+		-easy to validate and compile
+		-easy to generate for producers
+		-streamable and parallelizable
 
 This language has a lot of quality, but you can never be sure of a developer's mistake. So it would be wise to have tests
 
