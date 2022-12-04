@@ -76,6 +76,7 @@ The main requirement is that Chaos engineering is only active during normal work
 At Netflix, they are using Chaos Engineering to ensure that the system still works properly under a variety of different conditions. For this, there are certain variables that engineers observe. We can mention SPS (stream starts Per Second) which show how many users start streaming a video each second or new account signups per second.
 
 The SPS metric varies slowly and predictably over the course of a day, as shown in this Figure ![image](https://user-images.githubusercontent.com/107374001/205501116-0509bee0-1e74-4f05-98b4-1b87fd00b87a.png)
+
 Engineers at Netflix spend so much time looking at SPS that they have developed an intuition about whether a given fluctuation is within the standard range of variation or whether it is cause for concern. If engineers observe an unexpected change in SPS, we know there is a problem with the system.
 
 Netflix is not the only company to apply chaos engineering. Organizations such as Amazon, Google, Microsoft, and Facebook apply similar techniques to test the resilience of their own systems.
