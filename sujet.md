@@ -92,19 +92,20 @@ WebAssembly (Wasm) is a binary instruction format for a stack-based virtual mach
 
 WebAssembly addresses the problem of safe, fast, portable low-level code on the Web. Previous attempts at solving it, from ActiveX to Native Client to asm.js, have fallen short of properties that a low-level compilation target should have:
 
-	 Safe, fast, and portable semantics:
+	.Safe, fast, and portable semantics:
 		-safe to execute
 		-fast to execute
 		-language-, hardware-, and platform-independent
 		-deterministic and easy to reason about
 		-simple interoperability with the Web platform
-	 Safe and efficient representation:
+
+	.Safe and efficient representation:
 		-compact and easy to decode
 		-easy to validate and compile
 		-easy to generate for producers
 		-streamable and parallelizable
 
-This language has a lot of quality, but you can never be sure of a developer's mistake. So it would be wise to have tests
+We find that many classic vulnerabilities which, due to common mitigations, are no longer exploitable in native binaries, are completely exposed in WebAssembly but you can never be sure of a developer's mistake. So it would be wise to have tests.
 
 _________________________________________________________________________________________________________________________________________________________
 5.
