@@ -44,12 +44,10 @@ ________________________________________________________________________________
 
 2. #--------------------Answer 2---------------------------------------------------#
 
-One of the bug that they resolve on the page and we have choossen to talk about  is the lack of a function to test if a hasher instance is empty.In fact this function is really important because some operations are supposed to be done on empty hasher so if we can't test this criteria it's a problem. 
+The Apache Commons Collections package contains types that extend and augment the Java Collections Framework.It use dedicated issue tracking systems to discuss and follow the evolution of bugs and new features. Here we chose to explain one of them.
+The bug was that The CollectionUtils.removeAll(Collection<E> collection, Collection<?> remove) does not throw a NullPointerException(NPE) when the “remove” parameters is null, but only if the “collection” parameter is empty. In the documentation it is stated that an NPE will be thrown if any of the parameters is null.
 
-
-This is #a local bug#  because it is due to an omission of the developers.
-
-The Hasher interface of the bloomfilter package has no way of determining whether the hasher is empty. For the SimpleHasher implementation that is not a problem, however, the HasherCollection can be empty, and there is no guarantee that any other Hasher implementation can have an empty state. So to fix  this bug they just add a funtion to test if the hasher is empty
+This is a special case (first parameter needs to be empty and the second needs to be null) but this behavior is missing in the documentation. While this behavior is somehow correct (removing a null Object from an empty Collection we should obtain an empty Collection) I think throwing an NPE would be more in line with the documentation provided.
 
 The developers have indeed added a new test to counteract the bug
  
