@@ -36,18 +36,29 @@ this bug has naturally had various consequences such as:
 	-In humans terms: Claims were made in the press that up to 20-30 people may have died as a result of ambulances arriving to 
 	 late on the scene.
 	-In economic terms: The software is estimated to have cost between £1.1 and £1.5
-	
+
 Although there was functional testing of various components, integration testing to ensure that the system can operate together was not carried out. Thus, there was no attempt to test how the system would react to different circumstances such as high call rate, multiple incident reporting, vehicle location problems, falling back to backup servers, etc. It seems clear that if the tests had been done correctly they would have avoided this disaster
 
 _________________________________________________________________________________________________________________________________________________________
 
 2.
 The Apache Commons Collections package contains types that extend and augment the Java Collections Framework.It use dedicated issue tracking systems to discuss and follow the evolution of bugs and new features. Here we chose to explain one of them.
-The bug was that The CollectionUtils.removeAll(Collection<E> collection, Collection<?> remove) does not throw a NullPointerException(NPE) when the “remove” parameters is null, but only if the “collection” parameter is empty. In the documentation it is stated that an NPE will be thrown if any of the parameters is null.
+The bug was that The CollectionUtils.removeAll(Collection<E> collection, Collection<?> remove) does not throw a NullPointerException(NPE) when the “remove” parameters is null, but only if the “collection” parameter is empty. In the documentation it is stated that an NPE will be thrown if any of the parameters is null while this is not always the case.
 
-This is a special case (first parameter needs to be empty and the second needs to be null) but this behavior is missing in the documentation. While this behavior is somehow correct (removing a null Object from an empty Collection we should obtain an empty Collection) I think throwing an NPE would be more in line with the documentation provided.
+To solve the problem, they add null check in ListUtil.removeAll() as shown below:
 
-The developers have indeed added a new test to counteract the bug
+
+	Objects.requireNonNull(collection, "collection");
+	Objects.requireNonNull(remove, "remove");
+
+
+The developers have indeed added  new test as you can see below:
+
+	assertThrows(NullPointerException.class, () -> ListUtils.removeAll(null, new ArrayList<Object>()),
+                "expecting NullPointerException");
+
+        assertThrows(NullPointerException.class, () -> ListUtils.removeAll(new ArrayList<Object>(), null),
+                "expecting NullPointerException");
  
 _________________________________________________________________________________________________________________________________________________________
 3. Après lecture du texte sur le chaos engineering
