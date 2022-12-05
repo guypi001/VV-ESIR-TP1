@@ -111,7 +111,7 @@ ________________________________________________________________________________
 5.
 The main advantage is that the core of the mechanisation is our definition of two inductive relations, which correspond to the WebAssembly specification’s reduction and typing rules. These relations are not directly executable, but we define separate executable functions for an interpreter and type checker, and prove them correct with respect to their corresponding relation.
 
-Extending our mechanisation to model this feature revealed a deficiency in the WebAssembly specification that sabotaged the soundness of the type system. 
+Extending our mechanisation to model this feature revealed a deficiency in the WebAssembly specification that sabotaged the soundness of the type system.so this specification helped to improve it
 
 We have also defined a separate verified executable interpreter and type checker. Like many verified language implementations, these artefacts require integration with an external parser and linker to run as standalone programs, which introduces an untrusted interface
  
