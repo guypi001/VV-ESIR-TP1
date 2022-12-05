@@ -109,7 +109,18 @@ We find that many classic vulnerabilities which, due to common mitigations, are 
 
 _________________________________________________________________________________________________________________________________________________________
 5.
--what are the main advantages of the mechanized specification
+ what are the main advantages of the mechanized specification? 
 
 
--Did it help improving the original formal specification of the language
+Did it help improving the original formal specification of the language? 
+
+
+What other artifacts were derived from this mechanized specification?
+ 
+
+How did the author verify the specification? 
+
+
+
+
+ Does this new specification removes the need for testing?
