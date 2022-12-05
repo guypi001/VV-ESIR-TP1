@@ -109,18 +109,13 @@ We find that many classic vulnerabilities which, due to common mitigations, are 
 
 _________________________________________________________________________________________________________________________________________________________
 5.
- what are the main advantages of the mechanized specification? 
+The main advantage is that the core of the mechanisation is our definition of two inductive relations, which correspond to the WebAssembly specification’s reduction and typing rules. These relations are not directly executable, but we define separate executable functions for an interpreter and type checker, and prove them correct with respect to their corresponding relation.
 
+Extending our mechanisation to model this feature revealed a deficiency in the WebAssembly specification that sabotaged the soundness of the type system. 
 
-Did it help improving the original formal specification of the language? 
-
-
-What other artifacts were derived from this mechanized specification?
+We have also defined a separate verified executable interpreter and type checker. Like many verified language implementations, these artefacts require integration with an external parser and linker to run as standalone programs, which introduces an untrusted interface
  
 
-How did the author verify the specification? 
+we use to make our verified interpreter executable as a standalone program, since its internal state is more heavily based on the draft specification. In particular, the paper formalisation stores functions declared within WebAssembly programs within each instance itself. This is possible because the formalisation gives only a sketch description of the instantiation process. In the full draft specification, multiple instances may share the same store, and one may export a function that is imported by another. Instances cannot directly access each other, and therefore a single copy of the function can be held directly in the store, with each instance maintaining a reference to it.
 
-
-
-
- Does this new specification removes the need for testing?
+This new specification doesn't removes the need of testing because we have conducted differential testing of our executable interpreter against several major Web- Assembly engines. This was done both with the purpose of validating our interpreter, and potentially discovering semantic bugs in commercial WebAssembly engines. Tests were generated using the CSmith tool [Yang et al. 2011], combined with the official Binaryen toolchain [WebAssembly Community Group 2017a] to convert the generated C tests intoWeb- Assembly. This mimics how most WebAssembly programs will be produced “in the wild". No errors were found either in our implementation or any commercial engine, although a crash bug was discovered within the Binaryen toolchain itself, which was reported and fixed by the developer.
